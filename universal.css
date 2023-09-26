@@ -58,8 +58,8 @@ card {
 
 .flippedevil {
         transform: rotateY(180deg);
-        transition: 2s;
-        transition-property: border-top, border-bottom;
+        transition: border-top 2s 
+                    border-bottom 2s;
         border-top: 10px solid maroon;
         border-bottom: 6px solid maroon;
 }
