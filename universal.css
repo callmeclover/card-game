@@ -13,6 +13,8 @@ card {
         position: relative;
         transition: transform 1s;
         transform-style: preserve-3d;
+        transition: border-top 2s 
+                    border-bottom 2s;
 }
 
 .cardfront, .cardback {
@@ -58,8 +60,6 @@ card {
 
 .flippedevil {
         transform: rotateY(180deg);
-        transition: border-top 2s 
-                    border-bottom 2s;
         border-top: 10px solid maroon;
         border-bottom: 6px solid maroon;
 }
