@@ -51,7 +51,7 @@ card {
 }
 .cardback {
         transform: rotateY(180deg);
-        font-size: large;
+        font-size: medium;
         text-align: center;
         padding-top: 10px;
 }
