@@ -8,96 +8,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <div class="container">
-            <card class='common' onclick="this.classList.add('flipped')">
-              <div class="cardfront">
-              </div>
-              <div class="cardback">
-              <span id="name">wacky man</span><br>
-              <span id="type" style="color: fuchsia; font-size: small;">playable</span><br>
-
-              <span><i style="color: greenyellow; padding-right: 10px;" class="fa-sharp fa-solid fa-plus"></i><span id="hp" tooltip="The health of this card. If it reaches 0, the card is removed permanently.">100</span></span><br>
-              <span><i style="color: red; padding-right: 10px;" class="fa-sharp fa-solid fa-hand-fist"></i><span id="atk" tooltip="The base attack of this card. This card will deal more damage the higher this value is.">3.0231</span></span><br>
-              <span><i style="color: cornflowerblue; padding-right: 10px;" class="fa-sharp fa-solid fa-shield"></i><span id="def" tooltip="The base defense of this card. This card will block more damage the higher this value is.">30%</span></span><br>
-              <span><i style="color: red; padding-right: 10px;" class="fa-sharp fa-solid fa-percent"></i><span id="critcha" tooltip="The crit chance of this card. Will be more likely to crit if this value is higher.">1/24</span></span><br>
-              <span><i style="color: cornflowerblue; padding-right: 10px;" class="fa-sharp fa-solid fa-percent"></i><span id="defcha" tooltip="The defense chance of this card. Will be more likely to block if this value is higher.">4/24</span></span>
-              </div>
-            </card>
+        <div class="container" id="container">
             
-            <card class='uncommon' onclick="this.classList.add('flipped')">
-              <div class="cardfront">
-              </div>
-              <div class="cardback">
-                <span id="name">wacky man</span><br>
-                <span id="type" style="color: fuchsia; font-size: small;">playable</span><br>
-
-                <span><i style="color: greenyellow; padding-right: 10px;" class="fa-sharp fa-solid fa-plus"></i><span id="hp" tooltip="The health of this card. If it reaches 0, the card is removed permanently.">100</span></span><br>
-                <span><i style="color: red; padding-right: 10px;" class="fa-sharp fa-solid fa-hand-fist"></i><span id="atk" tooltip="The base attack of this card. This card will deal more damage the higher this value is.">3.0231</span></span><br>
-                <span><i style="color: cornflowerblue; padding-right: 10px;" class="fa-sharp fa-solid fa-shield"></i><span id="def" tooltip="The base defense of this card. This card will block more damage the higher this value is.">30%</span></span><br>
-                <span><i style="color: red; padding-right: 10px;" class="fa-sharp fa-solid fa-percent"></i><span id="critcha" tooltip="The crit chance of this card. Will be more likely to crit if this value is higher.">1/24</span></span><br>
-                <span><i style="color: cornflowerblue; padding-right: 10px;" class="fa-sharp fa-solid fa-percent"></i><span id="defcha" tooltip="The defense chance of this card. Will be more likely to block if this value is higher.">4/24</span></span>
-              </div>
-            </card>
-            
-            <card class='rare' onclick="this.classList.add('flipped')">
-              <div class="cardfront">
-              </div>
-              <div class="cardback">
-                <span id="name">wacky man</span><br>
-                <span id="type" style="color: fuchsia; font-size: small;">playable</span><br>
-
-                <span><i style="color: greenyellow; padding-right: 10px;" class="fa-sharp fa-solid fa-plus"></i><span id="hp" tooltip="The health of this card. If it reaches 0, the card is removed permanently.">100</span></span><br>
-                <span><i style="color: red; padding-right: 10px;" class="fa-sharp fa-solid fa-hand-fist"></i><span id="atk" tooltip="The base attack of this card. This card will deal more damage the higher this value is.">3.0231</span></span><br>
-                <span><i style="color: cornflowerblue; padding-right: 10px;" class="fa-sharp fa-solid fa-shield"></i><span id="def" tooltip="The base defense of this card. This card will block more damage the higher this value is.">30%</span></span><br>
-                <span><i style="color: red; padding-right: 10px;" class="fa-sharp fa-solid fa-percent"></i><span id="critcha" tooltip="The crit chance of this card. Will be more likely to crit if this value is higher.">1/24</span></span><br>
-                <span><i style="color: cornflowerblue; padding-right: 10px;" class="fa-sharp fa-solid fa-percent"></i><span id="defcha" tooltip="The defense chance of this card. Will be more likely to block if this value is higher.">4/24</span></span>
-              </div>
-            </card>
-            
-            <card class='epic' onclick="this.classList.add('flipped')">
-              <div class="cardfront">
-              </div>
-              <div class="cardback">
-                <span id="name">wacky man</span><br>
-                <span id="type" style="color: fuchsia; font-size: small;">playable</span><br>
-
-                <span><i style="color: greenyellow; padding-right: 10px;" class="fa-sharp fa-solid fa-plus"></i><span id="hp" tooltip="The health of this card. If it reaches 0, the card is removed permanently.">100</span></span><br>
-                <span><i style="color: red; padding-right: 10px;" class="fa-sharp fa-solid fa-hand-fist"></i><span id="atk" tooltip="The base attack of this card. This card will deal more damage the higher this value is.">3.0231</span></span><br>
-                <span><i style="color: cornflowerblue; padding-right: 10px;" class="fa-sharp fa-solid fa-shield"></i><span id="def" tooltip="The base defense of this card. This card will block more damage the higher this value is.">30%</span></span><br>
-                <span><i style="color: red; padding-right: 10px;" class="fa-sharp fa-solid fa-percent"></i><span id="critcha" tooltip="The crit chance of this card. Will be more likely to crit if this value is higher.">1/24</span></span><br>
-                <span><i style="color: cornflowerblue; padding-right: 10px;" class="fa-sharp fa-solid fa-percent"></i><span id="defcha" tooltip="The defense chance of this card. Will be more likely to block if this value is higher.">4/24</span></span>
-              </div>
-            </card>
-            
-            <card class='legendary' onclick="this.classList.add('flipped')">
-              <div class="cardfront">
-              </div>
-              <div class="cardback">
-                <span id="name">wacky man</span><br>
-                <span id="type" style="color: fuchsia; font-size: small;">playable</span><br>
-
-                <span><i style="color: greenyellow; padding-right: 10px;" class="fa-sharp fa-solid fa-plus"></i><span id="hp" tooltip="The health of this card. If it reaches 0, the card is removed permanently.">100</span></span><br>
-                <span><i style="color: red; padding-right: 10px;" class="fa-sharp fa-solid fa-hand-fist"></i><span id="atk" tooltip="The base attack of this card. This card will deal more damage the higher this value is.">3.0231</span></span><br>
-                <span><i style="color: cornflowerblue; padding-right: 10px;" class="fa-sharp fa-solid fa-shield"></i><span id="def" tooltip="The base defense of this card. This card will block more damage the higher this value is.">30%</span></span><br>
-                <span><i style="color: red; padding-right: 10px;" class="fa-sharp fa-solid fa-percent"></i><span id="critcha" tooltip="The crit chance of this card. Will be more likely to crit if this value is higher.">1/24</span></span><br>
-                <span><i style="color: cornflowerblue; padding-right: 10px;" class="fa-sharp fa-solid fa-percent"></i><span id="defcha" tooltip="The defense chance of this card. Will be more likely to block if this value is higher.">4/24</span></span>
-              </div>
-            </card>
-            
-            <card class='evil' onclick="this.classList.add('flippedevil')">
-              <div class="cardfront">
-              </div>
-              <div class="cardback">
-                <span id="name">wacky man</span><br>
-                <span id="type" style="color: fuchsia; font-size: small;">playable</span><br>
-
-                <span><i style="color: greenyellow; padding-right: 10px;" class="fa-sharp fa-solid fa-plus"></i><span id="hp" tooltip="The health of this card. If it reaches 0, the card is removed permanently.">100</span></span><br>
-                <span><i style="color: red; padding-right: 10px;" class="fa-sharp fa-solid fa-hand-fist"></i><span id="atk" tooltip="The base attack of this card. This card will deal more damage the higher this value is.">3.0231</span></span><br>
-                <span><i style="color: cornflowerblue; padding-right: 10px;" class="fa-sharp fa-solid fa-shield"></i><span id="def" tooltip="The base defense of this card. This card will block more damage the higher this value is.">30%</span></span><br>
-                <span><i style="color: red; padding-right: 10px;" class="fa-sharp fa-solid fa-percent"></i><span id="critcha" tooltip="The crit chance of this card. Will be more likely to crit if this value is higher.">1/24</span></span><br>
-                <span><i style="color: cornflowerblue; padding-right: 10px;" class="fa-sharp fa-solid fa-percent"></i><span id="defcha" tooltip="The defense chance of this card. Will be more likely to block if this value is higher.">4/24</span></span>
-              </div>
-            </card>
             </div>
+
+            <button onclick="createRandomCard();">random</button>
     </body>
 </html>
