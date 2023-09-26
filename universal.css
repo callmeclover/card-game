@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html, body {
+        font-family: "Space Mono", monospace;
+        color: white;
+}
+card {
+        width: calc(70px * 2);
+        height: calc(100px * 2);
+        background: #3b3b3b;
+        border-radius: 1em;
+        perspective: 600px;
+        position: relative;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+}
+
+.cardfront, .cardback {
+        backface-visibility: hidden;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+}
+.common {
+        border-top: 10px solid slategray;
+        border-bottom: 6px solid slategray;
+}
+.uncommon {
+        border-top: 10px solid chartreuse;
+        border-bottom: 6px solid chartreuse;
+}
+.rare {
+        border-top: 10px solid dodgerblue;
+        border-bottom: 6px solid dodgerblue;
+}
+.epic {
+        border-top: 10px solid #9c20aa;
+        border-bottom: 6px solid #9c20aa;
+}
+
+.legendary {        
+        border-top: 10px solid orange;
+        border-bottom: 6px solid orange;
+}
+.evil {
+        border-top: 10px solid orange;
+        border-bottom: 6px solid orange;
+}
+.flipped {
+        transform: rotateY(180deg);
+}
+.cardback {
+        transform: rotateY(180deg);
+        font-size: large;
+        text-align: center;
+        padding-top: 10px;
+}
+
+.flippedevil {
+        transform: rotateY(180deg);
+        transition: border-top 2s;
+        transition: border-bottom 2s;
+        border-top: 10px solid maroon;
+        border-bottom: 6px solid maroon;
+}
