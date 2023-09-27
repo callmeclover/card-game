@@ -51,10 +51,8 @@
     }
 }
 
-let lists = {
-    rarity: ['common', 'uncommon', 'rare', 'epic', 'legendary', 'evil'],
-    type:   ['playable', 'immediate', 'interjection', 'action', 'utility'],
-}
+    let rarity = ['common', 'uncommon', 'rare', 'epic', 'legendary', 'evil'];
+    let type =   ['playable', 'immediate', 'interjection', 'action', 'utility'];
 
 function createRandomCard() {
     let rarity = lists.rarity[Math.floor(Math.random() * (6 - 0 + 1) ) + 0];
