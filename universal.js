@@ -1,14 +1,17 @@
 let container = document.getElementById('containerappend')
 
 let raritylist = ['common', 'uncommon', 'rare', 'epic', 'legendary', 'evil'];
-let typelist = ['playable', 'immediate', 'interjection', 'action', 'utility'];
+let typelist = ['playable', 'immediate', 'interjection', 'action'];
+
+let name1 = ['silly', 'wacky', 'funny', 'goofy'];
+let name2 = ['man', 'guy', 'dude', 'goober'];
 
 let memory = [];
 
 function createRandomCard() {
-  let rarity = raritylist[Math.floor(Math.random() * (5 - 0 + 1)) + 0];
-  let type = typelist[Math.floor(Math.random() * (4 - 0 + 1)) + 0];
-  let name = 'wacky name';
+  let rarity = raritylist[Math.floor(Math.random() * (raritylist.length - 1 - 0 + 1)) + 0];
+  let type = typelist[Math.floor(Math.random() * (typelist.length - 1 - 0 + 1)) + 0];
+  let name = name1[Math.floor(Math.random() * (name1.length - 1 - 0 + 1)) + 0] + ' ' + name2[Math.floor(Math.random() * (name2.length - 1 - 0 + 1)) + 0];
   let element;
 
   if (type !== 'playable' || rarity === 'evil') {
