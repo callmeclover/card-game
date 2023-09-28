@@ -40,6 +40,7 @@ class Card {
     let type =   ['playable', 'immediate', 'interjection', 'action', 'utility'];
 
 function createRandomCard() {
+    try {
     let rarity = rarity[Math.floor(Math.random() * (6 - 0 + 1) ) + 0];
     let type = type[Math.floor(Math.random() * (5 - 0 + 1) ) + 0];
     let element;
@@ -87,4 +88,7 @@ function createRandomCard() {
             element = "<card class='" + rarity + "' onclick='classList.add(\'flipped\')'><div class='cardfront'></div><div class='cardback'><span id='name'>" + name + "</span><br><span id='type' style='color: fuchsia; font-size: small;'>" + type + "</span><br><span><i style='color: greenyellow; padding-right: 10px;' class='fa-sharp fa-solid fa-plus'></i><span id='hp' tooltip='The health of this card. If it reaches 0, the card is removed permanently.'>" + hp + "</span></span><br><span><i style='color: red; padding-right: 10px;' class='fa-sharp fa-solid fa-hand-fist'></i><span id='atk' tooltip='The base attack of this card. This card will deal more damage the higher this value is.'>" + atk + "</span></span><br><span><i style='color: cornflowerblue; padding-right: 10px;' class='fa-sharp fa-solid fa-shield'></i><span id='def' tooltip='The base defense of this card. This card will block more damage the higher this value is.'>" + def + "%</span></span><br><span><i style='color: red; padding-right: 10px;' class='fa-sharp fa-solid fa-percent'></i><span id='critcha' tooltip='The crit chance of this card. Will be more likely to crit if this value is higher.'>" + critcha + "/24</span></span><br><span><i style='color: cornflowerblue; padding-right: 10px;' class='fa-sharp fa-solid fa-percent'></i><span id='defcha' tooltip='The defense chance of this card. Will be more likely to block if this value is higher.'>" + defcha + "/24</span></span></div></card>";
     }
     container.insertAdjacentHTML('afterend', element)
+    } catch (err) {
+        document.getElementById('loggr').insertAdjacentHTML('beforebegin', '<p style="color:black;">' + err + '</p>')
+    }
 }
