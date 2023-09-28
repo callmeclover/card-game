@@ -6,8 +6,8 @@ let typelist = ['playable', 'immediate', 'interjection', 'action', 'utility'];
 let memory = [];
 
 function createRandomCard() {
-  let rarity = raritylist[Math.floor(Math.random() * (6 - 0 + 1)) + 0];
-  let type = typelist[Math.floor(Math.random() * (5 - 0 + 1)) + 0];
+  let rarity = raritylist[Math.floor(Math.random() * (5 - 0 + 1)) + 0];
+  let type = typelist[Math.floor(Math.random() * (4 - 0 + 1)) + 0];
   let name = 'wacky name';
   let element;
 
@@ -20,7 +20,6 @@ function createRandomCard() {
       element = "<card class='" + rarity + "' onclick='if (!this.classList.contains(\"flipped\")) { this.classList.add(\"flipped\") }'><div class='cardfront'></div><div class='cardback'><span id='name'>" + name + "</span><br><span id='type' style='color: fuchsia; font-size: small;'>" + type + "</span><br><span>" + desc + "</span></div></card>";
     }
   } else {
-    let name = 'wacky name';
     let hp = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
     let atk, def, defcha, critcha;
 
