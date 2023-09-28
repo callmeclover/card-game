@@ -4,6 +4,7 @@ html, body {
         font-family: "Space Mono", monospace;
         color: white;
 }
+
 card {
         width: calc(70px * 2);
         height: calc(100px * 2);

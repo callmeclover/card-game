@@ -92,3 +92,5 @@ function createRandomCard() {
         document.getElementById('loggr').insertAdjacentHTML('beforebegin', '<p style="color:black;">' + err + '</p>')
     }
 }
+
+container.insertAdjacentHTML('afterend', '<p style="color: black;">if you\'re seeing this it worked')
