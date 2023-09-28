@@ -9,8 +9,12 @@
     </head>
     <body>
         <div id="loggr"></div>
-        <p style="color: black;">current version (made to assure no old code is used in prod): test 16</p>
+        <p style="color: black;">current version (made to assure no old code is used in prod): test 17</p>
         <button onclick="createRandomCard();">random</button>
+        <button onclick="getCardFromMemory('random');">random card from memory</button>
+        <button onclick="getCardFromMemory('last');">last card from memory</button>
+        <input type="number" min="0" max="memory.length - 1" id="numberinput">
+        <button onclick="getCardFromMemory(document.getElementById('numberinput').value);">[number] card from memory card from memory</button>
 
         <div class="container" id="container">
             <div id="containerappend"></div>
