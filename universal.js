@@ -18,7 +18,7 @@ function createRandomCard() {
     let desc = 'this would be a test string if i had one lmao\ndraw like, 11,054 cards.';
 
     if (rarity === 'evil') {
-      element = "<card class='evil' onclick='if (!this.classList.contains(\"flipped\")) { this.classList.add(\"flipped\") }'><div class='cardfront evilcardfront'></div><div class='cardback'><span id='name'>" + name + "</span><br><span id='type' style='color: fuchsia; font-size: small;'>" + type + "</span><br><span>" + desc + "</span></div></card>";
+      element = "<card class='evil' onclick='if (!this.classList.contains(\"flipped\")) { this.classList.add(\"flipped\") }'><div class='cardfront evilcardfront'></div><div class='cardback evilcardback'><span id='name'>" + name + "</span><br><span id='type' style='color: fuchsia; font-size: small;'>" + type + "</span><br><span>" + desc + "</span></div></card>";
     } else {
       element = "<card class='" + rarity + "' onclick='if (!this.classList.contains(\"flipped\")) { this.classList.add(\"flipped\") }'><div class='cardfront'></div><div class='cardback'><span id='name'>" + name + "</span><br><span id='type' style='color: fuchsia; font-size: small;'>" + type + "</span><br><span>" + desc + "</span></div></card>";
     }
