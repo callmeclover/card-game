@@ -24,6 +24,10 @@ card {
         height: 100%;
         width: 100%;
 }
+.evilcardfront {
+  border-top: 10px solid orange;
+  border-bottom: 6px solid orange;
+}
 .common {
         border-top: 10px solid slategray;
         border-bottom: 6px solid slategray;
@@ -46,8 +50,8 @@ card {
         border-bottom: 6px solid orange;
 }
 .evil {
-        border-top: 10px solid orange;
-        border-bottom: 6px solid orange;
+        border-top: 10px solid maroon;
+        border-bottom: 6px solid maroon;
 }
 .flipped {
         transform: rotateY(180deg);
@@ -57,16 +61,6 @@ card {
         font-size: medium;
         text-align: center;
         padding-top: 10px;
-}
-
-.flippedevil {
-        transform: rotateY(180deg);
-        border-top: 10px solid maroon;
-        border-bottom: 6px solid maroon;
-
-        transition: border-top 2s 
-                    border-bottom 2s
-                    transform 1s;
 }
 
 
