@@ -1,5 +1,4 @@
-let containerReal = document.getElementById('container')
-let container = containerReal.append('div')
+let container = document.getElementById('containerappend')
 
 class Card {
     constructor(mem, rarity, name, type, flipped, stats) {
