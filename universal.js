@@ -32,7 +32,7 @@ class Card {
         }
         }
         this.createElement = function(element) {
-            container.insertAdjacentHTML(element)
+            container.insertAdjacentHTML('afterend', element)
         }
     }
 }
