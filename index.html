@@ -3,16 +3,16 @@
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="universal.css">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="lib/all.min.css"/>
     </head>
     <body>
         <div id="loggr"></div>
-        <p style="color: black;">current version (made to assure no old code is used in prod): test 17 fix 6</p>
-        <button onclick="createRandomCard();">random</button>
-        <button onclick="getCardFromMemory('random');">random card from memory</button>
-        <button onclick="getCardFromMemory('last');">last card from memory</button>
-        <input type="number" min="0" max="memory.length - 1" id="numberinput">
-        <button onclick="getCardFromMemory(document.getElementById('numberinput').value);">[number] card from memory</button>
+        <p style="color: black;">current version (made to assure no old code is used in prod): test 18</p>
+        <button onclick="CardManager.createRandomCard();">random</button>
+        <button onclick="CardManager.getCardFromMemory('random');">random card from memory</button>
+        <button onclick="CardManager.getCardFromMemory('last');">last card from memory</button>
+        <input type="number" min="0" id="numberinput">
+        <button onclick="CardManager.getCardFromMemory(document.getElementById('numberinput').value);">[number] card from memory</button>
 
         <div class="container" id="container">
             <div id="containerappend"></div>
@@ -20,5 +20,8 @@
 
         <script src="index.js"></script>
         <script src="universal.js"></script>
+
+        <script src="lib/chance.min.js"></script>
+        <script src="lib/jquery-1.10.1.min.js"></script>
     </body>
 </html>
