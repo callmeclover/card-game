@@ -44,7 +44,7 @@ class CardManagerClass {
       type =
       chance.weighted(this.typelist, this.typelistweights);
     }
-    let name = getRandomSlug();
+    let name = this.#getRandomSlug();
     let element;
   
     if (type !== "playable" || rarity === "evil") {
