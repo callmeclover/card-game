@@ -1,7 +1,6 @@
 let container = document.getElementById("containerappend");
 let chance = new Chance();
 
-
 class CardManagerClass {
   #memory = [];
 
@@ -14,13 +13,7 @@ class CardManagerClass {
 
   #getRandomSlug() {
     return (
-      this.#httpGet("https://random-word-form.repl.co/random/adjective")
-        .replace('["', "")
-        .replace('"]', "") +
-      " " +
-      this.#httpGet("https://random-word-form.repl.co/random/noun")
-        .replace('["', "")
-        .replace('"]', "")
+      adjectives[chance.integer({ min: 0, max: adjectives.length })] + " " + nouns[chance.integer({ min: 0, max: nouns.length })]
     );
   }
 
