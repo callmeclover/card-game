@@ -5,13 +5,20 @@ let chance = new Chance();
 class CardManagerClass {
   #memory = [];
 
+  #httpGet(theUrl) {
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+      xmlHttp.send( null );
+      return xmlHttp.responseText;
+  }
+
   #getRandomSlug() {
     return (
-      $.get("https://random-word-form.repl.co/random/adjective")
+      this.#httpGet("https://random-word-form.repl.co/random/adjective")
         .replace('["', "")
         .replace('"]', "") +
       " " +
-      $.get("https://random-word-form.repl.co/random/noun")
+      this.#httpGet("https://random-word-form.repl.co/random/noun")
         .replace('["', "")
         .replace('"]', "")
     );
