@@ -7,13 +7,13 @@
     </head>
     <body>
         <div id="loggr"></div>
-        <p style="color: black;">current version (made to assure no old code is used in prod): test 18.5</p>
+        <p style="color: black;">current version (made to assure no old code is used in prod): test 19</p>
         <button onclick="CardManager.createRandomCard();">random</button>
         <button onclick="CardManager.getCardFromMemory('random');">random card from memory</button>
         <button onclick="CardManager.getCardFromMemory('last');">last card from memory</button>
         <input type="number" min="0" id="numberinput">
         <button onclick="CardManager.getCardFromMemory(document.getElementById('numberinput').value);">[number] card from memory</button>
-        <button onclick="CardManager.clear();">clear</button>
+        <button onclick="LocalMemoryManager.clear();">clear</button>
 
         <div class="container" id="container">
             <div id="containerappend"></div>
