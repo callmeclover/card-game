@@ -1,9 +1,13 @@
 // Imports
+    memory = {
+    	slot1: [],
+      slot2: [],
+      slot3: []
+    };
+    mapmemory = {};
+
 class GameClass {
   constructor() {
-    
-    this.memory = [];
-    this.mapmemory = {};
     this.MapManager = {};
     this.CardManager = {
       raritylist: [
@@ -113,27 +117,27 @@ class GameClass {
             "/24</span></span></div></card>";
         }
         container.insertAdjacentHTML("afterend", element);
-        this.memory.push(element);
-        document.getElementById("numberinput").max = this.memory;
+        memory.slot1.push(element);
+        document.getElementById("numberinput").max = memory.slot1;
       },
       getCardFromMemory(number) {
         if (number == "random") {
           container.insertAdjacentHTML(
             "afterend",
-            this.memory[
+            memory.slot1[
               chance.unique(chance.integer, 1, {
                 min: 0,
-                max: this.memory.length - 1,
+                max: memory.slot1.length - 1,
               })
             ]
           );
         } else if (number == "last") {
           container.insertAdjacentHTML(
             "afterend",
-            this.memory[this.memory.length - 1]
+            memory.slot1[memory.slot1.length - 1]
           );
         } else {
-          container.insertAdjacentHTML("afterend", this.memory[number]);
+          container.insertAdjacentHTML("afterend", memory.slot1[number]);
         }
       }
     };
@@ -141,15 +145,15 @@ class GameClass {
       backupLocalMem(backupMap) {
         if (backupMap == true) {
           if (localStorage.getItem("mapmemory") == undefined) {
-            localStorage.setItem("mapmemory", this.mapmemory);
+            localStorage.setItem("mapmemory", mapmemory);
           } else {
-            localStorage.setItem("mapmemory", this.mapmemory);
+            localStorage.setItem("mapmemory", mapmemory);
           }
         }
         if (localStorage.getItem("memory") == undefined) {
-          localStorage.setItem("memory", this.memory);
+          localStorage.setItem("memory", memory.slot1);
         } else {
-          localStorage.setItem("memory", this.memory);
+          localStorage.setItem("memory", memory.slot1);
         }
       },
       loadLocalMem(intoContainer, loadMap) {
@@ -157,7 +161,7 @@ class GameClass {
         if (loadMap == true) {
           // Add later
         } else {
-          this.memory = localStorage.getItem("memory");
+          memory.slot1 = localStorage.getItem("memory");
           if (intoContainer == true) {
             localStorage.getItem("memory").forEach((element) => {
               container.insertAdjacentHTML("afterend", element);
@@ -173,12 +177,12 @@ class GameClass {
         }
       },
       clear(clearMap) {
-        this.memory = [];
+        memory.slot1 = [];
         document.getElementById("container").innerHTML =
           '<div class="container" id="container"><div id="containerappend"></div></div>';
         container = document.getElementById("containerappend");
         if (clearMap == true) {
-          this.mapmemory = {};
+          mapmemory = {};
         }
       }
     }
