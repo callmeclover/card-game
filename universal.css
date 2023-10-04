@@ -11,6 +11,7 @@ card {
   perspective: 600px;
   transition: transform 1s;
   transform-style: preserve-3d;
+  display: block;
   position: relative;
   width: calc(70px * 2);
   height: calc(100px * 2);
