@@ -23,6 +23,10 @@ class GameClass {
       typelistweights: [1, 1, 1, 3],
       typelistmevil: ["immediate", "interjection", "action"],
       typelistweightsmevil: [1, 1, 1],
+
+      actionlist: [["Draw 5 cards.", "Enemy loses turn.", "Double damage."], ["Draw 6 cards.", "Enemy loses 2 turns.", "Triple damage."], ["Draw 7 cards.", "Enemy loses 3 turns.", "Quadruple damage."], ["Gain <strong color='red'>Bloodthirsty</strong> effect."]],
+      actionlistevil: [["Lose 2 cards this round.", "Lose this turn.", "Double enemy damage."], ["Lose 4 cards this round.", "Lose 2 turns.", "Triple enemy damage."], ["Lose 6 cards this round.", "Lose 3 turns.", "Quadruple enemy damage."], ["Enemy gains <strong color='red'>Bloodthirsty</strong> effect."]],
+
       getRandomSlug() {
         return (
           adjectives[chance.integer({ min: 0, max: adjectives.length })] +
@@ -42,10 +46,11 @@ class GameClass {
         let element;
     
         if (type !== "playable" || rarity === "evil") {
-          let desc =
-            "this would be a test string if i had one lmao\ndraw like, 11,054 cards.";
+          let desc;
     
           if (rarity === "evil") {
+            let list = chance.weighted(this.actionlistevil, [1, 0.25, 0.05, 0.01])
+            desc = list[chance.integer({min: 0, max: list.length - 1})];
             element =
               "<card class='evil' onclick='if (!this.classList.contains(\"flipped\")) { this.classList.add(\"flipped\") }'><div class='cardfront'></div><div class='cardback'><span id='name'>" +
               name +
@@ -55,6 +60,8 @@ class GameClass {
               desc +
               "</span></div></card>";
           } else {
+            let list = chance.weighted(this.actionlist, [1, 0.25, 0.05, 0.01])
+            desc = list[chance.integer({min: 0, max: list.length - 1})];
             element =
               "<card class='" +
               rarity +
@@ -110,11 +117,7 @@ class GameClass {
             atk +
             "</span></span><br><span><i style='color: cornflowerblue; padding-right: 10px;' class='fa-sharp fa-solid fa-shield'></i><span id='def' tooltip='The base defense of this card. This card will block more damage the higher this value is.'>" +
             def +
-            "%</span></span><br><span><i style='color: red; padding-right: 10px;' class='fa-sharp fa-solid fa-percent'></i><span id='critcha' tooltip='The crit chance of this card. Will be more likely to crit if this value is higher.'>" +
-            critcha +
-            "/24</span></span><br><span><i style='color: cornflowerblue; padding-right: 10px;' class='fa-sharp fa-solid fa-percent'></i><span id='defcha' tooltip='The defense chance of this card. Will be more likely to block if this value is higher.'>" +
-            defcha +
-            "/24</span></span></div></card>";
+            "%</span></span><br></div></card>";
         }
         container.insertAdjacentHTML("afterend", element);
         memory.slot1.push(element);
