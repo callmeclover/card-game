@@ -24,8 +24,16 @@ class GameClass {
       typelistmevil: ["immediate", "interjection", "action"],
       typelistweightsmevil: [1, 1, 1],
 
-      actionlist: [["Draw 5 cards.", "Enemy loses turn.", "Double damage."], ["Draw 6 cards.", "Enemy loses 2 turns.", "Triple damage."], ["Draw 7 cards.", "Enemy loses 3 turns.", "Quadruple damage."], ["Gain <strong color='red'>Bloodthirsty</strong> effect."]],
-      actionlistevil: [["Lose 2 cards this round.", "Lose this turn.", "Double enemy damage."], ["Lose 4 cards this round.", "Lose 2 turns.", "Triple enemy damage."], ["Lose 6 cards this round.", "Lose 3 turns.", "Quadruple enemy damage."], ["Enemy gains <strong color='red'>Bloodthirsty</strong> effect."]],
+      actionlist: [[
+          "Draw 5 cards.", "Enemy loses turn.", "Double damage."], [
+          "Draw 6 cards.", "Enemy loses 2 turns.", "Triple damage.", "Gain <strong>Comfort</strong> effect."], [
+          "Draw 7 cards.", "Enemy loses 3 turns.", "Quadruple damage."], [
+          "Gain <strong color='red'>Bloodthirsty</strong> effect."]],
+      actionlistevil: [[
+          "Lose 2 cards this round.", "Lose this turn.", "Double enemy damage."], [
+          "Lose 4 cards this round.", "Lose 2 turns.", "Triple enemy damage.", "Half damage.", "Enemy gains <strong>Comfort</strong> effect."], [
+          "Lose 6 cards this round.", "Lose 3 turns.", "Quadruple enemy damage.", "Gain <strong>Freezing</strong> effect.", "Gain <strong>Burning</strong> effect."], [
+          "Enemy gains <strong color='red'>Bloodthirsty</strong> effect."]],
 
       getRandomSlug() {
         return (
