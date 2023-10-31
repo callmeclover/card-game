@@ -15,7 +15,6 @@ card {
   position: relative;
   width: calc(70px * 2);
   height: calc(100px * 2);
-  margin-right: 40px;
   font-size: medium;
   text-align: center;
 }
